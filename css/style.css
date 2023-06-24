@@ -245,6 +245,7 @@ button {
  .calc__resetbtn {
      color: #000000;
      background-color: #FFFFFF;
+     cursor: pointer;
  }
 
 .text-bg {

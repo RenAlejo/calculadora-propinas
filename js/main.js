@@ -10,6 +10,7 @@ const divResult = document.querySelector('.result');
 const amountInput = document.querySelector('.accountAmount');
 const amountOfPeopleInput = document.querySelector('.amountOfPeople');
 const btnCalculate = document.querySelector('.calc__sendbtn');
+const btnReset = document.querySelector('.calc__resetbtn');
 
 // PARSEAMOS NUMERO TOTAL DE LA CUENTA AGREGANDOLE DECIMALES
 amountInput.addEventListener('keyup', event => {
@@ -79,4 +80,26 @@ calculatorForm.addEventListener( 'submit', event => {
 });
 
 
+// CAPTURAMOS EVENTO CLICK BOTÓN RESET
+
+btnReset.addEventListener( 'click', event => {
+
+    const formDefaultValues = {
+        "accountAmount": " ",
+        "percentage": "10",
+        "amountOfPeople": "1",
+        "round": "1"
+    }
+
+    Array.from( calculatorForm.elements )
+    .forEach( element => {
+        if( formDefaultValues[element.name] ) {
+            element.value = formDefaultValues[element.name];
+        }
+    });
+
+    divResult.style.display = 'none';
+    btnCalculate.disabled = true;
+    
+});
 
