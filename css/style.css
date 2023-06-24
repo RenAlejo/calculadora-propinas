@@ -1,0 +1,363 @@
+
+
+/*--------------------------------------------------------------------- IMPORTACIÓN DE FUENTES ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,800i&display=swap');
+
+
+/*--------------------------------------------------------------------- ESTILOS GENERALES ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+     margin: 0;
+     padding: 0;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-family: 'Poppins', sans-serif;
+     font-size: 14px;
+     font-weight: normal;
+     line-height: 1.80857;
+}
+
+a {
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     -webkit-transition: all .3s ease-in-out;
+     color: #1f1f1f;
+     outline: none !important;
+     text-decoration: none !important;
+     transition: all .3s ease-in-out;
+}
+
+
+*,
+*::after,
+*::before {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+
+button:focus {
+     outline: none;
+}
+
+ul,
+li,
+ol {
+     list-style: none;
+     margin: 0px;
+     padding: 0px;
+}
+
+p {
+     font-size: 15px;
+     font-weight: 500;
+     line-height: 24px;
+     margin: 0px;
+}
+
+a {
+     color: #222222;
+     outline: none !important;
+     text-decoration: none;
+}
+
+a,
+.btn {
+     -moz-transition: all .3s ease-in-out;
+     -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     -webkit-transition: all .3s ease-in-out;
+     outline: none !important;
+     text-decoration: none !important;
+     transition: all .3s ease-in-out;
+}
+
+img {
+     height: auto;
+     max-width: 100%;
+}
+
+ :focus {
+     outline: 0;
+}
+
+
+.lead {
+     color: #767676;
+     font-size: 18px;
+     line-height: 30px;
+     margin: 0;
+     padding: 0;
+}
+
+.form-control:focus {
+     border-color: #ffffff !important;
+     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+
+blockquote {
+     margin: 20px 0 20px;
+     padding: 30px;
+}
+
+button {
+     border: 0;
+     cursor: pointer;
+     margin: 0;
+     padding: 0;
+}
+
+
+/*---------------------------- INTERFAZ DE CARGA  ----------------------------*/
+
+.calc__loader {
+     background: #fff;
+     height: 100%;
+     position: fixed;
+     width: 100%;
+     z-index: 9999999;
+}
+
+.calc__loaderimage {
+     align-items: center;
+     display: flex;
+     height: 100%;
+     justify-content: center;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+}
+
+.calc__loaderimage img {
+     width: 280px;
+}
+
+/*-- MENU --*/
+
+.calc__sidepanel {
+     background-color: #070101;
+     height: 100%;
+     left: 0;
+     overflow-x: hidden;
+     padding-top: 60px;
+     position: fixed;
+     top: 0;
+     transition: 0.5s;
+     width: 0;
+     z-index: 9999;
+}
+
+.calc__sidepanel a {
+     color: #fff;
+     display: block;
+     font-size: 18px;
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     transition: 0.3s;
+}
+
+.calc__sidepanel a:hover {
+     color: #0f98f8;
+}
+
+.calc__sidepanel .calc__closebtn {
+     font-size: 36px;
+     position: absolute;
+     right: 25px;
+     top: 0;
+}
+
+.calc__calc__openbtn {
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     font-size: 20px;
+     margin-left: 16px;
+     padding: 0;
+}
+
+
+.calc__rightbutton {
+     display: flex;
+     flex-wrap: wrap;
+     float: right;
+}
+
+.calc__openbtn {
+     background: unset;
+ }
+
+
+.calc__header {
+     background: transparent;
+     padding: 30px 30px;
+     position: absolute;
+     width: 100%;
+     z-index: 999;
+}
+
+
+/** CALCULADORA **/
+
+.calc__section {
+     background: url(../images/banner.png);
+     padding: 300px 0px 0px 0px;
+     background-size: auto 78%;
+     background-repeat: no-repeat;
+     min-height: 1150px;
+     background-position: right top;
+}
+
+.calc__form {
+     background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+     border-radius: 13px;
+     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14), 0 3px 8px 0 rgba(0, 0, 0, 0.11);
+     padding: 20px;
+ }
+
+ .calc__title {
+     margin: 20px 0 20px 0;
+ }
+
+ .calc__sendbtn {
+     background-image: linear-gradient(180deg, #ff9d7a 0, #ff8f83 10%, #ff8089 20%, #ff718d 30%, #ff628d 40%, #f25389 50%, #d34683 60%, #b63c7d 70%, #9e3678 80%, #883174 90%, #752e71 100%);
+ }
+
+ .calc__sendbtn:hover {
+     background-image: linear-gradient(180deg, #ffc0a9 0, #ffb5a6 16.67%, #ffa9a2 33.33%, #f29d9d 50%, #de9297 66.67%, #cc8891 83.33%, #bb7f8b 100%);
+ }
+
+ .calc__resetbtn {
+     color: #000000;
+     background-color: #FFFFFF;
+ }
+
+.text-bg {
+     float: right;
+     margin-top: 70px;
+     max-width: 430px;
+     text-align: left;
+     width: 100%;
+}
+
+.text-bg h1 {
+     color: #0f98f8;
+     font-size: 60px;
+     font-weight: bold;
+     line-height: 70px;
+     padding-bottom: 45px;
+}
+
+.text-bg span {
+     color: #222222;
+     display: block;
+     font-size: 17px;
+     font-weight: 500;
+     line-height: 30px;
+     margin-bottom: 30px;
+}
+
+.ban_track {
+     margin-top: 55px;
+}
+
+.calc__container {
+     padding: 0 80px;
+}
+
+/* .result {
+     display: none;
+} */
+
+.result {
+     display: none;
+}
+
+.result__perPerson, .result__totalAccount {
+     align-items: center;
+     background-color: #ffffff;
+     color: #19685d;
+     display: flex;
+     height: 40px;
+     justify-content: left;
+     padding: 20px;
+}
+
+.result__perPerson {
+     border-radius: 10px 10px 0px 0px;
+     margin-top: 20px;
+}
+
+.result__totalAccount {
+     background-image: linear-gradient(180deg, #a5d9f4 0, #6cb4d8 50%, #1d90bd 100%);
+     border-radius: 0px 0px 100px 0px;
+     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14), 0 3px 8px 0 rgba(0, 0, 0, 0.11);
+     color: #fff;
+}
+
+.result__perPersonAmount, .result__totalAccountAmount {
+     margin-left: 10px;
+}
+
+.ban_track figure {
+     margin: 0;
+}
+
+.transfot {
+     text-align: left;
+}
+
+
+#calcContainer .carousel-caption {
+     padding: 0;
+     position: inherit;
+}
+
+/** footer **/
+
+.footer {
+     text-align: center;
+}
+
+.copyright {
+     background-color: #0f98f8;
+     margin-top: 70px;
+     padding: 20px 0;
+}
+
+.copyright p {
+     color: #fff;
+     font-size: 18px;
+     font-weight: normal;
+     line-height: 22px;
+     padding-right: 0 !important;
+     padding-top: 0px;
+     text-align: center;
+}
+
+.copyright a {
+     color: #fff;
+}
+
+.copyright a:hover {
+     color: #000;
+}
+
+
+/** end footer **/
+

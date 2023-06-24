@@ -1,0 +1,76 @@
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .calc__container {
+        padding: 0 80px 0 0px;
+    }
+    .transfot span {
+        font-size: 15px;
+    }
+    .transfot h3 {
+        font-size: 16px;
+    }
+    .calc__section {
+        background-size: auto 64%;
+        padding: 220px 0px 0px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-bg h1 {
+        font-size: 43px;
+        padding-bottom: 20px;
+        line-height: 44px;
+    }
+    .calc__section {
+        padding: 152px 0px 0px 0px;
+        background-color: #cacaca !important;
+        background: inherit;
+        min-height: 919px;
+    }
+
+    .transfot h3 {
+        font-size: 19px;
+    }
+    #calcContainer {
+        top: 41%;
+    }
+    
+    .calc__container {
+        padding: 0 80px 0 0px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .calc__section {
+        padding: 152px 0px 90px 0px;
+        background-color: #cacaca !important;
+        background: inherit;
+    }
+    .calc__container {
+        padding: 0 80px 0 0px;
+    }
+    
+    .transfot {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .calc__header {
+        padding: 30px 0px 15px 0px;
+    }
+   
+    .calc__section {
+        padding: 152px 0px 90px 0px;
+        background-color: #cacaca !important;
+        background: inherit;
+    }
+    .calc__container {
+        padding: 0 20px;
+    }
+   
+    .transfot {
+        padding-top: 30px;
+    }
+}
+
